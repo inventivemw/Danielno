@@ -1,0 +1,29 @@
+Title: Esperanto Magazine
+
+----
+
+Text: Esperanto is a bi-monthly magazine created by students at Monash, Caulfield. They pry into aspects of student life, drinking, sex, travel, music and study. Through the website, they are able to extend their branding, reach,  upload articles and competitions.
+
+----
+
+Categories: Web Design
+
+----
+
+Year: 2014
+
+----
+
+Website: http://www.esperantomagazine.com
+
+----
+
+Grid: two-thirds
+
+----
+
+Tags: 
+
+----
+
+Caption: <strong>Above:</strong>  Esperanto Magazine landing page displayed on different devices

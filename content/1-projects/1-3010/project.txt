@@ -1,0 +1,32 @@
+Title: 3010 – Melbourne University magazine (online)
+
+----
+
+Text: For many years, the Melbourne University Magazine explored a diverse array of topics encompassing all University faculties, with a particular focus on interdisciplinary research and impact.
+With its new identity of 3010, the website was optimised for both desktop screens as well handheld devices – providing a seamless reading experience across all devices. 3010 online was also developed to be maintained by internal staff and updated on a regular basis.
+
+*The website is powered by Wordpress and is using DW Wallpress as a framework.*
+
+----
+
+Caption: <strong>Above:</strong> The website adapting to the desktop screens, tablet and mobile devices.
+
+----
+
+Categories: Web Design
+
+----
+
+Year: 2014
+
+----
+
+Grid: half
+
+----
+
+Website: http://mag.alumni.unimelb.edu.au
+
+----
+
+Vimeo: 

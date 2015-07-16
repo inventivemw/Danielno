@@ -1,0 +1,47 @@
+Title: Esperanto Magazine
+
+----
+
+Date: 2015-07-12
+
+----
+
+Lead: During my final year I discovered that Esperanto had an error in their website description on Google’s search result. So I thought they might not have a web developer on board or just just not an active one.
+
+----
+
+Text: So I jumped on the opportunity and contacted the art director to help with their online presence and possibly redevelop their website to cater better towards their viewers. Luckily enough they were thrilled to have me on board and began work as soon as we could just so we could meet the publication launch simultaneously.
+
+(image: sex-yellow.jpg caption: The first issue for 2015 developed by the Esperanto team at MONSU)
+
+### Research
+The first consultation with the team focused on the aesthetics of the website and also the needs of the magazine throughout the year:
+- What will the website be used for
+- How will the website help meet their goals
+- How frequent will they update the website
+- Who will update the website
+- What content platform does the team have experience in
+
+### Design
+The main issue that we needed to address with the previous website, was that the layout lacked the personality of the magazine. There was no theme or consistency with the branding of the magazine - with an exception of the logo.
+
+The articles were all displayed in small and tight boxes – which caused confusion into what the users were actually navigating into due to overflowing headings. So there were simple accessibility and experience issues that needed to be addressed with the new design.
+
+After a week of wire framing and consulting with the art director, we finally had a core layout that focused on the hierarchy of articles. For example, featured and political issues were place in sections that provided more prominence, whereas articles that focused on social commentary are placed in less prominent sections.
+
+(image: wireframe.jpg caption: Wireframes of the old theme compared to the revised design.)
+
+### Development
+The next step was deciding what content management system to use. The requirements were:
+- Easy to post and edit articles
+- Free and secure
+- Self-sustainable
+- 24/7 support
+- Intuitive user interface
+- Collaborative with contributors
+
+The decision of using Wordpress as the primary platform was a no brainer. However, Wordpress does come with its fair share of bloated features. To work around this flaw, we decided to develop a custom theme using [Starkers](https://github.com/viewportindustries/starkers "Starkers wordpress theme") as a base - that way we can focus on speed optimisation and core functionality from the ground up - rather than culling the fat away from an existing theme.
+
+----
+
+Tags: work,web design

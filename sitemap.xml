@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://danielno.com/</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/war-of-ice-and-fire</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/esperanto-magazine</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/caulfield-bier</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/roselia</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/northside</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/new-trix</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/flight-of-the-conchords-robots</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/scaletta-annual-report</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/wilson-joanna</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/projects/beyond-earth</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://danielno.com/about</loc>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

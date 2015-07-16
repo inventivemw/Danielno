@@ -1,0 +1,713 @@
+/*
+    
+    Daniel Ngo - 2014
+    ----------------------------------------------------------------------------
+    
+    Style Index
+
+    $1 - Typography and Colour
+    $2 - Header and Navigation
+    $3 - Body and Structure
+
+    $M - Miscellaneous
+    $0 - Media Queries
+
+*/
+
+@import url("bootstrap.min.css");
+@import url("bootstrap-responsive.min.css");
+@import "bourbon/bourbon";
+@import "susy";
+
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box,
+  gutters: 1/24 
+);
+
+@include border-box-sizing;
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/*------------------------------------------------------------------------------
+ $1 - Typography and Colour
+------------------------------------------------------------------------------*/
+
+$colour-background: #ededed;
+$colour-white: #ffffff;
+$colour-grey: tint(black, 15%);
+$colour-mgrey: tint($colour-grey, 90%);
+$colour-lgrey: tint($colour-grey, 30%);
+$colour-orange: #ff9f35;
+$colour-aqua: #45c1b9;
+$colour-yellow: #eee54e;
+
+$font-size: golden-ratio(11px,  1);
+$font-size-sm: $font-size*0.85;
+$font-display: "ff-tisa-sans-web-pro", sans-serif;
+$font-body: "ff-tisa-web-pro", serif;
+$paragraph-leading: 1.75em;
+$display-leading: 1.25em;
+
+$resolution: 1120px;
+
+$break-tiny: 420px;
+$break-small: 550px;
+$break-medium: 1024px;
+$break-large: 1280px;
+
+body {
+    background: $colour-background;
+    color: $colour-grey;
+    font: {
+        family: $font-body;
+        size: $font-size;
+        weight: 400;
+    }
+}
+
+p {
+    color: $colour-grey;
+    font-family: $font-body;
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    line-height: $paragraph-leading;
+    margin-bottom: $paragraph-leading / 1.5;
+    a {
+        border-bottom: 2px solid $colour-orange;
+        color: $colour-grey;
+        padding-bottom: 0.015em;
+        &:hover {
+            color: $colour-orange;
+            text-decoration: none;
+        }
+    }
+    &.lead {
+        font-size: $font-size * 1.5;
+        margin-top: $font-size;
+    }
+    strong {
+        font-size: 1.1em;
+    }
+}
+
+blockquote {
+    font-size: $font-size * 1.5;
+    line-height: $display-leading;
+    border-left: 5px solid $colour-orange;
+}
+
+a {
+    border-bottom: 2px solid $colour-orange;
+    color: $colour-grey;
+    display: inline-block;
+
+    &:hover {
+        color: $colour-orange;
+        text-decoration: none;
+    }
+    @include transition ( color 0.25s );
+}
+
+h1, h2, h3, h4, h5 {
+    @include transition ( color 0.25s );
+    font: {
+        family: $font-display;
+        weight: 700;
+    };
+    line-height: $display-leading;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------------------------------------------------------
+ $2 - Header and Navigation
+------------------------------------------------------------------------------*/
+
+header {
+    padding: 45px 20px;
+    position: fixed;
+    right: 5%;
+    z-index: 2;
+
+    @media screen and (max-width: $break-medium) {
+        padding: 60px 20px 0;
+        position: static;
+        width: 100%;
+    }
+
+    @media screen and (max-width: $break-small) {
+        text-align: center;
+    }
+
+    #menu {
+        float: right;
+        padding-right: 20px;
+
+        @media screen and (max-width: $break-small) {
+            float: none;
+            padding: 0;
+        }
+
+        @media screen and (max-width: $break-medium) {
+            width: 100%;
+        }
+
+        p {
+            color: $colour-grey;
+            margin: 0;
+            font: {
+                family: $font-display;
+                size: $font-size;
+            }
+        }
+
+        #logo {
+            margin-bottom: 1em;
+            max-width: 160px;
+            @media screen and (max-width: $break-medium) {
+                float: left;
+            }
+            @media screen and (max-width: $break-small) {
+                float: none;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            a {
+                color: $colour-grey;
+                text-decoration: none;
+                h1 {
+                    display: inline-block;
+                    font: {
+                        family: $font-display;
+                        size: $font-size * 1.25;
+                        weight: 700;
+                    };
+                    line-height: 1.25em;
+                    margin: 0.15em 0;
+                    &:hover {
+                        color: $colour-orange;
+                    }
+                    span {
+                        color: $colour-lgrey;
+                    }
+                    em {
+                        font-family: $font-body;
+                        font-style: italic;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        
+        #contact {
+            p {
+                font-family: $font-body;
+            }
+
+            @media screen and (max-width: $break-medium) {
+                float: right;
+            }
+
+            @media screen and (max-width: $break-small) {
+                float: none;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            #social-media {
+                list-style-type: none;
+                margin: 2em 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    margin-right: 7px;
+                    a {
+                        border: none;
+                    }
+
+                    img {
+                        @include transition ( opacity 0.25s );
+                        opacity: 0.25;
+                        width: $font-size*1.75;
+                    }
+
+                    &:hover img {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------------
+ $3 - Body and Structure
+------------------------------------------------------------------------------*/
+
+#wrapper {
+    max-width: 960px;
+    .text {
+        padding: 180px 40px 40px;
+        h1 {
+            font-weight: 700;
+            padding: 1em 0;
+        }
+    }
+}
+
+.lazy {
+    background: #fff;
+}
+
+.page-wrapper {
+    float: left;
+    max-width: 80%;
+    padding: 20px;
+    width: 100%;
+    @media screen and (max-width: $break-medium) {
+        max-width: 100%;
+    }
+}
+
+.container {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 50px 0 25px;
+    margin: 25px 0 0;
+    @media screen and (max-width: $break-medium) {
+        padding: 0;
+        margin-top: 0;
+    }
+    @include container;
+    @include span(12);
+
+
+    .thumbnail {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        background: none;
+        border: none;
+        float: left;
+        margin: 0;
+        overflow: hidden;
+        padding: 5px;
+        position: relative;
+        width: 100%;
+
+        .title {
+            color: #fff;
+            display: none;
+            font: {
+                family: $font-display;
+                size: $font-size*1.5;
+                weight: 700;
+            }
+            left: 0;
+            line-height: 1.25em;
+            height: 100%;
+            padding: 15%;
+            position: absolute;
+            text-align: center;
+            text-decoration: underline;
+            top: 20%;
+            width: 100%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        a {
+            border: none;
+            @include transition ( opacity 0.25s );
+            &:hover {
+                opacity: 0.75;
+                .title {
+                    display: block;
+                    @media screen and (max-width: $break-small) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .grid-full {
+        max-height: 520px;
+        margin: 4px 0 !important;
+        padding-right: 10px;
+        @include span(12);
+        .title {
+            top: 18%;
+        }
+
+        @media screen and (max-width: $break-small) {
+            padding-right: 5px;
+        }
+    }
+    .grid-twothirds {
+        @include span(8);
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+        }
+        .title {
+            top: 23%;
+        }
+    }
+    .grid-half {
+        max-height: 480px;
+        @include span(6);
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+        }
+        .title {
+            top: 20%;
+        }
+    }
+    .grid-third {
+        @include span(4);
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+        }
+    }
+    .grid-quarter {
+        @include span(3);
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+        }
+    }
+    .grid-tall {
+        @include span(4 last);
+        @media screen and (max-width: $break-small) {
+            max-height: 260px;
+            width: 100%;
+        }
+        .title {
+            top: 35%;
+        }
+    }
+
+    .item {
+        margin: 0;
+    }
+}
+
+#main-content {
+    max-width: $resolution - ($resolution/5);
+}
+
+article {
+    overflow: hidden;
+}
+
+#desc {
+    overflow: hidden;
+    padding: 40px;
+
+    @media screen and (max-width: $break-medium) {
+        padding: 10px;
+    }
+
+    .proj-desc {
+        max-width: 65%;
+        float: right;
+        padding-left: 3em;
+        @media screen and (max-width: $break-medium) {
+            max-width: 100%;
+            padding: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .meta {
+            margin-top: 1em;
+        }
+    }
+
+    h2 {
+        display: inline-block;
+        font-size: $font-size * 1.75;
+        font-weight: 700;
+        margin: 15px 0;
+        max-width: 580px;
+        @media screen and (max-width: $break-medium) {
+            max-width: 100%;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        max-width: 580px;
+        @media screen and (max-width: $break-medium) {
+            padding: 0;
+            max-width: 100%;
+        }
+
+        &.caption {
+            float: left;
+            font-size: $font-size-sm;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.5em;
+            padding-top: 4.75em;
+            text-align: right;
+            max-width: 25%;
+            margin-left: 8%;
+
+            @media screen and (max-width: $break-medium) {
+                margin: 0;
+                max-width: 100%;
+                padding-top: 1em;
+                position: static;
+                text-align: left;
+            }
+        }
+    }
+}
+
+#proj-meta {
+    margin-top: 1.5em;
+    p {
+        color: $colour-grey;
+        font-size: $font-size-sm;
+        margin: 0;
+        padding: 0;
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+#about {
+    @include span(10);
+    .text {
+        @include span(8);
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+        }
+        h2 {
+            border-bottom: 2px solid $colour-grey;
+            display: inline-block;
+            font-size: $font-size * 1.25;
+            font-weight: 700;
+            margin: 20px 0;
+            max-width: 580px;
+        }
+    }
+    #experience {
+        font-size: $font-size-sm;
+        padding-right: 20px;
+        @include span(4 last);
+        ul {
+            list-style-type: none;
+            li {
+                margin-bottom: 1.5em;
+                position: relative;
+                text-align: right;
+                span {
+                    background: $colour-white;
+                    text-indent: 9999px;
+                    float: right;
+                    border-radius: 10px;
+                    border: 1px solid $colour-lgrey;
+                    height: 7px;
+                    position: absolute;
+                    right: -15px;
+                    top: 9px;
+                    width: 7px;
+                }
+                a {
+                    border-bottom: 2px solid $colour-orange;
+                    color: $colour-grey;
+                    &:hover {
+                        color: $colour-orange;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $break-small) {
+            display: none;
+        }
+    }
+}
+
+#journal {
+    @include span(10);
+    .content-body {
+        @include span (10);
+        h1 {
+            margin-bottom: 2em;
+        }
+        h3 {
+            margin: 0.75em 0 0.25em;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            font-size: 1em;
+            font-style: italic;
+            margin: 1em 0;
+        }
+        .body {
+            margin-left: 4em;
+        }
+
+        footer {
+            ul {
+                font-size: $font-size-sm;
+                list-style-type: none;
+                li {
+                    display: inline-block;
+                    float: left;
+                    margin-right: 1em;
+                    max-width: 200px;
+                    padding-right: 1em;
+                    p {
+                        margin: 0;
+                    }
+                    &.tags {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------------
+ $4 - Footer
+------------------------------------------------------------------------------*/
+
+footer {
+    font: {
+        family: $font-body;
+        size: $font-size;
+    }
+    margin: 40px 0;
+    padding: 10px 10px 20px;
+    overflow: hidden;
+
+    a {
+        color: $colour-grey;
+        border-bottom: 2px solid $colour-orange;
+        margin-left: 0.75em;
+
+        &:hover {
+            color: $colour-orange;
+            text-decoration: none;
+        }
+    }
+
+    .copyright {
+        float: left;
+        @media screen and (max-width: $break-small) {
+            float: none;
+        }
+    }
+
+    .footer-right {
+        float: right;
+        @media screen and (max-width: $break-small) {
+            float: none;
+        }
+    }
+
+    @media screen and (max-width: $break-medium) {
+        padding: 20px 0;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+/*------------------------------------------------------------------------------
+ $M - Miscellaneous
+------------------------------------------------------------------------------*/
+
+.nextprev {
+    margin: 1em 0;
+
+    a {
+        color: $colour-grey;
+        text-decoration: none;
+
+        &:hover {
+            color: $colour-orange;
+        }
+    }
+
+    span {
+        display: inline-block;
+        padding: 0 0.5em;
+    }
+
+    .prev-button {
+        float: left;
+    }
+
+    .next-button {
+        float: right
+    }
+
+    .glyphicon {
+        top: 2px;
+    }
+}
+
+.round-button {
+    border: none;
+    display: none;
+    height: 50px;
+    opacity: 0.3;
+    position: fixed;
+    right: 1em;
+    transform: scale(0.75);
+    top: 50%;
+    width: 50px;
+    z-index: 3;
+    @include border-radius(25px);
+    @include transition ( all 0.25s );
+    &:hover {
+        opacity: 1 !important;
+        transform: scale(1);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.scrollToTop {
+    background: {
+        color: $colour-orange;
+        image: url('../images/scroll-top.png');
+        repeat: no-repeat;
+        position: 50%;
+        size: 50%;
+    }
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*------------------------------------------------------------------------------
+ $0 - Media Queries
+------------------------------------------------------------------------------*/
+
+/* Retina detection for images */
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {}

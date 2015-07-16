@@ -1,0 +1,1 @@
+<?php `git pull git@github.com:inventivemw/danielno.git`;

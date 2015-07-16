@@ -1,0 +1,35 @@
+Title: Esperanto Magazine
+
+----
+
+Text: Esperanto is a magazine run by the student union at Monash, Caulfield; exploring student life, travel, music and study. Through the website, Esperanto were able to extend their branding, reach, promote advertisers, upload  exclusive articles and host competitions.
+
+The website challenges the conventional zine website by including major updates to the landing page for every new issue. The design draws influences from <a href="http://www.voxmedia.com/" title="_blank">Vox Media</a> web design philosophy; through the use constructed layouts using hero images and a clear establishment of information hierarchy.
+
+----
+
+Categories: Web Design
+
+----
+
+Year: 2014
+
+----
+
+Website: http://www.esperantomagazine.com
+
+----
+
+Grid: two-thirds
+
+----
+
+Caption: <strong>Above:</strong>  The website adapting to the desktop screens, tablet and mobile devices.
+
+----
+
+Vimeo: 
+
+----
+
+Casestudy: /journal/esperanto-magazine
